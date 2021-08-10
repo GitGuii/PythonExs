@@ -1,28 +1,24 @@
-import random
+print('{:=^40}'.format(" Organizações tabajaras "))
+preco = float(input("preço das compras: R$ "))
+print('''formas de pagamento 
+[1] A vista dinheiro/cheque
+[2] A vista no cartão
+[3] 2x no cartão
+[]4 3x ou mais no cartão''')
+opcao = int(input("Digite a opção de pagamento "))
+if opcao == 1:
+    total = preco - (preco *10/100)
+elif opcao == 2:
+    total = preco -(preco *5/100)
+elif opcao == 3:
+    total = preco
+    parcela = preco / 2
+    print('Sua compora de {} sera parcelada em 2x de {:.2f}'.format(preco,parcela))
+elif opcao == 4:
+    total = preco + (preco *20/100)
+    totparcelas = int(input("Quantas parcelas? "))
+    parcela = total / totparcelas 
+    print("sua compra sera parcelada em {} vezes de {:.2f} com juros".format(totparcelas,parcela))
+print('Sua compra  de  {:.2f} vai custar {:.2f} no final'.format(preco, total))
 
-n =(input('Digite:\n 01 para pedra \n 02 para papel \n 03 para tesoura: '))
-n1 = "pedra"
-n2 = "papel"
-n3 = "tesoura"
-lista = [n1,n2,n3]
-nr = random.choice(lista)
-if n==1 and nr==n1 or n==2 and nr==n2 or n==3 and nr==n3:
-    print('Empate!!')
-elif n1 == 1 and nr ==n2:
-    print('Voçê escolheu pedra e a maquina escolheu papel...')
-    print('Vitoria da maquina!!!')
-elif n1 == 1 and nr == n3:
-    print('Voçê escolheu pedra e a maquina escolheu tesoura...')
-    print('Voçê venceu!!!')
-elif n1 == 2 and nr == n1:
-    print('Voçê escolheu papel e a maquina escolheu pedra')
-    print('Voçê venceu!!!!!!')
-elif n1 == 2 and nr == n3:
-    print('Voçê escolheu papel e a maquina escolheu tesoura')
-    print('Vitoria da maquina!!!')
-elif n1 == 3 and nr == n1:
-    print('Voçê escolheu tesoura e a maquina escolheu pedra')
-    print('Vitoria da maquina!!!')
-elif n1 == 3 and nr == n2:
-    print('Voçê escolheu tesoura e a maquina escolheu papel')
-    print('Voçê venceu!!!!!!')
+
