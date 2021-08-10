@@ -9,9 +9,9 @@ if Idade < 18:
     print('Faltam {} anos para o alistamento'.format(prazo))
     ano = prazo + atual
     print("Seu alistamento sera em {}".format(ano))
-elif Idade ==18:
+elif Idade == 18:
     print('Esta na hora de se alistar!!')
-elif Idade >18:
+elif Idade > 18:
     print('Ja passou da idade de alistamento')
     prazo = Idade - 18
     print('Já se passaram {} ano(s) do prazo de alistamento'.format(prazo))
