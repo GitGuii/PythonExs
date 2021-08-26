@@ -9,7 +9,7 @@ while True:
     c += 1
     if idade > 18:
         maior += 1
-    if sexo in 'Mm':
+    if sexo in 'Mm': 
         homem += 1
     if sexo in 'Ff' and idade < 20:
         mulhermaior += 1
